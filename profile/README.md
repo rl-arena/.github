@@ -1,6 +1,6 @@
 # 🎮 RL-Arena
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10+-green.svg)
 ![Go](https://img.shields.io/badge/go-1.21+-00ADD8.svg)
 
