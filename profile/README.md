@@ -24,10 +24,10 @@ RL-Arena is an open-source competitive reinforcement learning platform that comb
 
 Ready to train your first agent? Here's where to begin:
 
--  [**Installation Guide**](https://github.com/rl-arena/rl-arena-docs) — Get set up in minutes
--  [**First Agent Tutorial**](https://github.com/rl-arena/rl-arena-docs) — Build and submit your first agent
--  [**Documentation**](https://github.com/rl-arena/rl-arena-docs) — Complete API reference and guides
--  [**Contributing Guide**](https://github.com/rl-arena/.github/blob/main/CONTRIBUTING.md) — Help us build the platform
+-  [**Getting Started Guide**](https://github.com/rl-arena/rl-arena-docs/blob/main/GETTING_STARTED.md) — Install, train, and submit your first agent
+-  [**Architecture Overview**](https://github.com/rl-arena/rl-arena-docs/blob/main/ARCHITECTURE.md) — Understand the system design
+-  [**API Reference**](https://github.com/rl-arena/rl-arena-docs/blob/main/API_REFERENCE.md) — Complete REST API and WebSocket documentation
+-  [**Development Guide**](https://github.com/rl-arena/rl-arena-docs/blob/main/DEVELOPMENT.md) — Set up your development environment
 
 ## 📦 Repositories
 
@@ -35,11 +35,28 @@ Our platform is built across multiple specialized repositories:
 
 | Repository | Description | Tech Stack |
 |------------|-------------|------------|
-| [**rl-arena-env**](https://github.com/rl-arena/rl-arena-env) | Python environment library for training agents (pip installable) | Python 3.10+ |
-| [**rl-arena-backend**](https://github.com/rl-arena/rl-arena-backend) | REST API server handling submissions and matchmaking | Go 1.21+ |
-| [**rl-arena-executor**](https://github.com/rl-arena/rl-arena-executor) | Isolated game execution engine with Docker support | Go + Docker |
-| [**rl-arena-web**](https://github.com/rl-arena/rl-arena-web) | Interactive frontend for browsing and watching matches | React + TypeScript |
-| [**rl-arena-docs**](https://github.com/rl-arena/rl-arena-docs) | Comprehensive documentation and tutorials | Markdown |
+| [**rl-arena-env**](https://github.com/rl-arena/rl-arena-env) | Python environment library for local agent training (pip installable) | Python 3.10+ / Gymnasium |
+| [**rl-arena-backend**](https://github.com/rl-arena/rl-arena-backend) | REST API server with auto-matchmaking, ELO rankings, and rate limiting | Go 1.21+ / Gin / PostgreSQL |
+| [**rl-arena-executor**](https://github.com/rl-arena/rl-arena-executor) | Isolated match execution engine on Kubernetes | Python 3.10+ / gRPC / K8s |
+| [**rl-arena-web**](https://github.com/rl-arena/rl-arena-web) | Web interface for submissions, leaderboards, and replay viewing | React 18 / Vite / Tailwind |
+| [**rl-arena-docs**](https://github.com/rl-arena/rl-arena-docs) | Comprehensive documentation, API reference, and deployment guides | Markdown |
+
+## 🎯 Platform Features
+
+### Core Functionality
+- ✅ **Auto-Matchmaking** — Agents automatically paired every 30 seconds based on ELO
+- ✅ **ELO Rating System** — Provisional (K=40), Intermediate (K=32), Established (K=24)
+- ✅ **Rate Limiting** — 5-minute cooldown + 100 matches/day per agent
+- ✅ **Dual Replay Format** — HTML visualization + JSON frame data
+- ✅ **UTC Timestamps** — Consistent timezone handling across all systems
+- ✅ **WebSocket Updates** — Real-time build status and match notifications
+
+### Development Features
+- ✅ **Docker Isolation** — Secure agent execution in containers
+- ✅ **Kubernetes Orchestration** — Scalable match execution
+- ✅ **gRPC Communication** — Efficient backend-executor protocol
+- ✅ **JWT Authentication** — Secure API access
+- ✅ **PostgreSQL Storage** — Reliable data persistence
 
 ## 🤝 Contributing
 
@@ -50,7 +67,7 @@ We welcome contributions from the community! Here's how you can help:
 -  **Features** — Propose and build new platform features
 -  **Documentation** — Improve guides, tutorials, and API docs
 
-Check out our [Contributing Guide](https://github.com/rl-arena/.github/blob/main/CONTRIBUTING.md) to get started!
+Check out our [Development Guide](https://github.com/rl-arena/rl-arena-docs/blob/main/DEVELOPMENT.md) to get started!
 
 ### ⭐ Star our repos!
 
