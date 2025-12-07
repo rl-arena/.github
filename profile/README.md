@@ -73,6 +73,8 @@ Check out our [Development Guide](https://github.com/rl-arena/rl-arena-docs/blob
 
 If you find RL-Arena useful, please consider starring our repositories to show your support and help others discover the project!
 
+### [Demo Video](https://www.youtube.com/watch?v=HnM3PJJuT9k)
+
 ---
 
 <div align="center">
